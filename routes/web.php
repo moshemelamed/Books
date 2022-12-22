@@ -16,3 +16,21 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/books', function () {
+    $book = [
+        ['title' => 'mad men',
+        'author'=> 'mosh',
+        'publisher' => 'randum hous',
+        'year' => 1956],
+        ['title' => 'mad men',
+        'author'=> 'mosh',
+        'publisher' => 'randum hous',
+        'year' => 1956],
+        ['title' => 'mad men',
+        'author'=> 'mosh',
+        'publisher' => 'randum hous',
+        'year' => 1956]
+    ];
+    return view('books', ['book' => $book]);
+});
