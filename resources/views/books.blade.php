@@ -400,7 +400,7 @@
             <div class="container">
                 <div class="row">
                     @for($i = 0; $i < count($book); $i++) 
-                    <div class="col">
+                    <div class="col shadow-lg p-3 mb-5 bg-white rounded border border-dark">
                         <p>title = {{ $book[$i]['title'] }}</p>
                         <p>author = {{ $book[$i]['author'] }}</p>
                         <p>publisher = {{ $book[$i]['publisher'] }}</p>
