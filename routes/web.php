@@ -17,20 +17,24 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/books', function () {
-    $book = [
-        ['title' => 'mad men',
-        'author'=> 'mosh',
-        'publisher' => 'randum hous',
-        'year' => 1956],
-        ['title' => 'mad men',
-        'author'=> 'mosh',
-        'publisher' => 'randum hous',
-        'year' => 1956],
-        ['title' => 'mad men',
-        'author'=> 'mosh',
-        'publisher' => 'randum hous',
-        'year' => 1956]
-    ];
-    return view('books', ['book' => $book]);
-});
+Route::get('/books', function(){
+        $users = App\Models\User::all();
+        echo $users;
+        $book = [
+            ['title' => 'mad men',
+            'author'=> 'mosh',
+            'publisher' => 'randum hous',
+            'year' => 1956],
+            ['title' => 'mad men',
+            'author'=> 'mosh',
+            'publisher' => 'randum hous',
+            'year' => 1956],
+            ['title' => 'mad men',
+            'author'=> 'mosh',
+            'publisher' => 'randum hous',
+            'year' => 1956]
+        ];
+        return view('books', ['book' => $book]);
+    }
+    
+);
